@@ -1,11 +1,12 @@
+"use strict";
 //Variables
-var nombre = "helis";
-var apelllido = "montes";
-var edad = 26;
-var fecha = "01-17-95";
-var meses = ["Enero", "Febrero", "Marzo", "Abril"];
-var tallas = [7, 7.5, 8.5, 9, 9.5, 10.5];
-var numero;
+let nombre = "helis";
+let apelllido = "montes";
+let edad = 26;
+let fecha = "01-17-95";
+let meses = ["Enero", "Febrero", "Marzo", "Abril"];
+let tallas = [7, 7.5, 8.5, 9, 9.5, 10.5];
+let numero;
 numero = 7;
 numero = "Siete";
 //typeof es para saber el tipo de dato de una variable
@@ -26,46 +27,41 @@ console.log(typeof nombre);
     El parametros RES es para unifcar dentro de un array las otras variables que se reciban
 
 */
-var heroe = function (name, lastName, capitalizar, edad) {
-    if (capitalizar === void 0) { capitalizar = false; }
-    var otrosParametros = [];
-    for (var _i = 4; _i < arguments.length; _i++) {
-        otrosParametros[_i - 4] = arguments[_i];
-    }
-    var capitalizado = function (palabra) {
+const heroe = (name, lastName, capitalizar = false, edad, ...otrosParametros) => {
+    const capitalizado = (palabra) => {
         return palabra.charAt(0).toLocaleUpperCase() + palabra.substr(1).toLocaleLowerCase();
     };
     if (capitalizar) {
         if (edad) {
             if (otrosParametros.length === 0) {
-                return "Mi nombre es " + capitalizado(name) + " " + capitalizado(lastName) + " y tengo " + edad + " a\u00F1os";
+                return `Mi nombre es ${capitalizado(name)} ${capitalizado(lastName)} y tengo ${edad} años`;
             }
             else {
-                return "Mi nombre es " + capitalizado(name) + " " + capitalizado(lastName) + ", tengo " + edad + " a\u00F1os " + otrosParametros.join(" ");
+                return `Mi nombre es ${capitalizado(name)} ${capitalizado(lastName)}, tengo ${edad} años ${otrosParametros.join(" ")}`;
             }
         }
         else {
-            return "Mi nombre es " + capitalizado(name) + " " + capitalizado(lastName);
+            return `Mi nombre es ${capitalizado(name)} ${capitalizado(lastName)}`;
         }
     }
     else {
-        return "Mi nombre es " + name + " " + lastName;
+        return `Mi nombre es ${name} ${lastName}`;
     }
 };
-var imprimir = heroe(nombre, apelllido, true, edad);
-console.log("Imprimir - " + imprimir);
-var imprimir2 = heroe(nombre, apelllido, true, edad, "y me gusta programar", "en typescript");
-console.log("Imprimir2 - " + imprimir2);
-var OBJBATMAN = {
+let imprimir = heroe(nombre, apelllido, true, edad);
+console.log(`Imprimir - ${imprimir}`);
+let imprimir2 = heroe(nombre, apelllido, true, edad, "y me gusta programar", "en typescript");
+console.log(`Imprimir2 - ${imprimir2}`);
+const OBJBATMAN = {
     name: "Bruno",
     lastName: "Diaz",
     edad: 24,
     poderes: ["Super detective", "Defenza personal"],
-    getNombre: function () {
+    getNombre() {
         return this.name;
     }
 };
-var OBJSUPERMAN = {
+const OBJSUPERMAN = {
     name: "Clark",
     lastName: "Kent",
     poderes: ["Super detective", "Defenza personal"]
