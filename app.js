@@ -5,6 +5,11 @@ var edad = 26;
 var fecha = "01-17-95";
 var meses = ["Enero", "Febrero", "Marzo", "Abril"];
 var tallas = [7, 7.5, 8.5, 9, 9.5, 10.5];
+var numero;
+numero = 7;
+numero = "Siete";
+//typeof es para saber el tipo de dato de una variable
+console.log(typeof nombre);
 /*  FUNCIONES
 
     En los parametros se puede definir el tipo de dato que va a recibir esa variable, en caso de
@@ -51,3 +56,17 @@ var imprimir = heroe(nombre, apelllido, true, edad);
 console.log("Imprimir - " + imprimir);
 var imprimir2 = heroe(nombre, apelllido, true, edad, "y me gusta programar", "en typescript");
 console.log("Imprimir2 - " + imprimir2);
+var OBJBATMAN = {
+    name: "Bruno",
+    lastName: "Diaz",
+    edad: 24,
+    poderes: ["Super detective", "Defenza personal"],
+    getNombre: function () {
+        return this.name;
+    }
+};
+var OBJSUPERMAN = {
+    name: "Clark",
+    lastName: "Kent",
+    poderes: ["Super detective", "Defenza personal"]
+};

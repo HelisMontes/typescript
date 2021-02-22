@@ -3,8 +3,15 @@ let nombre:string = "helis";
 let apelllido:string = "montes";
 let edad:number =  26;
 let fecha:string = "01-17-95";
-let meses:string[] = ["Enero", "Febrero", "Marzo", "Abril"]
-let tallas:number[] = [7, 7.5, 8.5, 9, 9.5, 10.5]
+let meses:string[] = ["Enero", "Febrero", "Marzo", "Abril"];
+let tallas:number[] = [7, 7.5, 8.5, 9, 9.5, 10.5];
+let numero:number|string;
+
+numero = 7;
+numero = "Siete";
+
+//typeof es para saber el tipo de dato de una variable
+console.log(typeof nombre);
 
 
 /*  FUNCIONES
@@ -47,3 +54,34 @@ console.log(`Imprimir - ${imprimir}`);
 
 let imprimir2:string = heroe(nombre, apelllido, true, edad, "y me gusta programar", "en typescript");
 console.log(`Imprimir2 - ${imprimir2}`);
+
+
+// OBJETOS
+/*
+
+    En los objetos tambien podemos indicar que parametro son olbigatorios y opcional
+
+*/
+type Heores = {
+    name:string,
+    lastName:string,
+    edad?:number,
+    poderes: string[],
+    getNombre?:() => string
+}
+
+const OBJBATMAN: Heores = {
+    name: "Bruno",
+    lastName: "Diaz",
+    edad: 24,  
+    poderes:["Super detective", "Defenza personal"],
+    getNombre(){
+        return this.name;    
+    }
+};
+
+const OBJSUPERMAN:Heores = {
+    name: "Clark",
+    lastName: "Kent",  
+    poderes:["Super detective", "Defenza personal"]
+}
