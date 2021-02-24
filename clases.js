@@ -53,8 +53,5 @@ console.log(`clase Humano -`, humano);
 const perro = new Animal("Perro", "Canis", ["Pastor Aleman", "Lobo siberiano"], "Rog", "", "Macho", ["Gusto", "Tacto", "Oido", "Olfato"]);
 console.log(`clase Animal -`, perro);
 console.log(perro.caminar());
-console.log(humano.getNombre);
-console.log(humano.setNombre = "Jose");
-console.log(humano.getNombre);
 humano.consultarBD();
 console.log(humano.getNombre, humano.getApellido, humano.getSexo, humano.getSentidos);
