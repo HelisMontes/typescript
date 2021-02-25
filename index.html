@@ -7,8 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <script src="app.js"></script> -->
-    <script src="interfaz.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+    <script type="systemjs-importmap">
+        {
+        "imports": {
+            "app": "./build/src/class.js"
+        }
+        }
+    </script>
+<script type="systemjs-module" src="import:app"></script>
     
 </body>
 </html>

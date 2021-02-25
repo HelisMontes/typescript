@@ -1,0 +1,26 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "mi primera app en tsc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelisMontes/typescript.git"
+  },
+  "author": "Helis Montes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelisMontes/typescript/issues"
+  },
+  "homepage": "https://github.com/HelisMontes/typescript#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "systemjs": "^6.8.3"
+  }
+}
