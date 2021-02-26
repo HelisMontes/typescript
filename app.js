@@ -1,4 +1,3 @@
-"use strict";
 //Variables
 let nombre = "helis";
 let apelllido = "montes";

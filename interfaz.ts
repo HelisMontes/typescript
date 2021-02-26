@@ -1,5 +1,18 @@
-import { Humano } from './interfaces/humano';
-const hombre: Humano.humano = {
+interface humano{
+    nombre:string;
+    apellido: string;
+    edad:number;
+    sentidos?:{ vista:boolean, 
+        gusto:boolean, 
+        oido:boolean, 
+        olfato:boolean, 
+        tacto:boolean,
+        poder?:string[]
+    }
+    consultar?(nombre:string):void;
+}
+
+const hombre: humano = {
     nombre:"Helis",
     apellido:"Montes",
     edad:26,
@@ -14,7 +27,7 @@ const hombre: Humano.humano = {
 }
 console.log(`Objeto Hombre - `, hombre);
 
-class Men implements Humano.humano{
+class Men implements humano{
     nombre:string;
     apellido:string;
     edad:number;

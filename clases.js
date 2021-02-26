@@ -1,4 +1,3 @@
-"use strict";
 class Humano {
     constructor(name, lastname, sex, sentidos) {
         this.nombre = name;
